@@ -13,6 +13,7 @@ class DatabaseConnectionPool:
                 if cls._instance is None:
                     cls._instance = super(DatabaseConnectionPool, cls).__new__(cls)
                     cls._instance._initialize_pool()
+        return cls._instance
 
     def _initialize_pool(self):
         print("Initializing DB pool")
